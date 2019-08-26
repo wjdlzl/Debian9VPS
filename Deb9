@@ -194,7 +194,7 @@ END
 systemctl start openvpn@server
 #Create OpenVPN Config
 mkdir -p /home/vps/public_html
-cat > /home/vps/public_html/exic.ovpn <<-END
+cat > /home/vps/public_html/client.ovpn <<-END
 
 # Created by PhcExic
 auth-user-pass
@@ -224,8 +224,8 @@ http-proxy-option CUSTOM-HEADER ""
 http-proxy-option CUSTOM-HEADER "POST https://viber.com HTTP/1.0"
 END
 echo '<ca>' >> /home/vps/public_html/exic.ovpn
-cat /etc/openvpn/ca.crt >> /home/vps/public_html/exic.ovpn
-echo '</ca>' >> /home/vps/public_html/exic.ovpn
+cat /etc/openvpn/ca.crt >> /home/vps/public_html/client.ovpn
+echo '</ca>' >> /home/vps/public_html/client.ovpn
 
 cat > /home/vps/public_html/OpenVPN-Stunnel.ovpn <<-END
 
