@@ -50,8 +50,8 @@ confdir /etc/privoxy
 logdir /var/log/privoxy
 filterfile default.filter
 logfile logfile
+listen-address  0.0.0.0:8085
 listen-address  0.0.0.0:3355
-listen-address  0.0.0.0:8086
 toggle  1
 enable-remote-toggle  0
 enable-remote-http-toggle  0
@@ -426,7 +426,7 @@ echo "   - OpenVPN		: TCP 1147 "  | tee -a log-install.txt
 echo "   - OpenVPN-Stunnel	: 587 "  | tee -a log-install.txt
 echo "   - Dropbear		: 442"  | tee -a log-install.txt
 echo "   - Stunnel	: 443"  | tee -a log-install.txt
-echo "   - Squid Proxy	: 3355, 8080 (limit to IP Server)"  | tee -a log-install.txt
+echo "   - Squid Proxy	: 8085, 3355 (limit to IP Server)"  | tee -a log-install.txt
 echo "   - Nginx		: 80"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
